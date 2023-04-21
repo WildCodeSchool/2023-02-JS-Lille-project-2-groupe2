@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+// eslint-disable
+import "./InputUsername.scss";
 
 function InputUserName() {
   const [name, setName] = useState("");
@@ -15,9 +17,9 @@ function InputUserName() {
 
   return (
     <div className="input-username">
-      <h1>Votre pseudo : {text} </h1>
+      <h2>Enter Username : {text} </h2>
       <form className="form-username" onSubmit={handleClick}>
-        <input type="text" onChange={handleChange} placeholder="Pseudo" />
+        <input type="text" onChange={handleChange} placeholder="Username" />
         <button type="submit">Play !</button>
       </form>
     </div>

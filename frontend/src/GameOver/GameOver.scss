@@ -1,0 +1,70 @@
+$green: #99c24d;
+$orange: #f18f01;
+$black: #494a4d;
+$font: "Cherry Bomb";
+$red: #ff0505;
+$white: #fff;
+
+@mixin absolute-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+* {
+  font-family: $font;
+}
+.wrapper {
+  @include absolute-center();
+  display: flex;
+  justify-content: center;
+  background-color: $black;
+}
+.popup {
+  @include absolute-center();
+  width: 300px;
+  background-color: $orange;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flexbox;
+  justify-content: center;
+  transition: transform 200ms;
+  font-family: $font;
+  color: $red;
+}
+
+.title {
+  padding-left: 5px;
+  font-size: 30px;
+  margin-bottom: 8px;
+  color: $red;
+}
+
+.score {
+  padding-left: 5px;
+  font-size: 16px;
+  color: $white;
+  margin-top: 20vh;
+}
+.restart {
+  padding: 2vh 3vw;
+  border-radius: 10px;
+  background: $black;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: bold;
+  margin: 10px 30px;
+  color: #fff;
+  align-self: center;
+
+  &:hover {
+    background: $black;
+  }
+}
+.logo {
+  @include absolute-center();
+  padding-top: 30px;
+  width: 35vw;
+}

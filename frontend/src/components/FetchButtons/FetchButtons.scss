@@ -1,0 +1,23 @@
+$green: #99c24d;
+$orange: #f18f01;
+$black: #494a4d;
+$font: "Cherry Bomb";
+$red: #ff0505;
+$white: #fff;
+
+@mixin absolute-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+* {
+  font-family: $font;
+  display: flex;
+  justify-content: center;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

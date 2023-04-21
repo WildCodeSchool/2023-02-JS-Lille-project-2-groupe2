@@ -1,6 +1,7 @@
 import InputUserName from "../../components/InputUsername/InputUsername";
 import FetchButtons from "../../components/FetchButtons/FetchButtons";
 import StartButton from "../../components/StartButton/StartButton";
+// import Transition from "@components/animation/animation";
 
 function HomePage() {
   return (
@@ -9,6 +10,7 @@ function HomePage() {
       <InputUserName />
       <FetchButtons />
       <StartButton />
+      {/* <Transition /> */}
     </>
   );
 }
