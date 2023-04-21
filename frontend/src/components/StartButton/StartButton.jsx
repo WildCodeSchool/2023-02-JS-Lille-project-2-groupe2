@@ -17,7 +17,7 @@ function StartButton() {
         type="submit"
         className="myButton"
         id="start"
-        style={{ display: "none" }}
+        // style={{ display: "none" }}
         onClick={OpenGamePage}
       >
         Start
