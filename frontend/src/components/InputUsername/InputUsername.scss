@@ -1,0 +1,40 @@
+$green: #99c24d;
+$orange: #f18f01;
+$black: #494a4d;
+$font: "Cherry Bomb";
+$red: #ff0505;
+$white: #fff;
+
+@mixin absolute-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+* {
+  font-family: $font;
+}
+
+.input-username {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: $white;
+
+  h2 {
+    display: flex;
+    flex-direction: column;
+    color: $white;
+  }
+}
+
+.form-username {
+  display: flex;
+  justify-content: center;
+}
+input {
+  background-color: $white;
+  border-radius: 10px;
+  font-size: 1.5vw;
+  margin: 2vw;
+}
