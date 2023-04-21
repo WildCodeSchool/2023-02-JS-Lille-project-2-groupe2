@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// eslint-disable
 import "./InputUsername.scss";
 
 function InputUserName() {
