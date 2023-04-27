@@ -27,6 +27,8 @@ function ShowPictures() {
   const [card, setCard] = useState([]);
   // Start game when all the card are ready on useEffect
   const [ready, setReady] = useState();
+  const [flipped, setFlipped] = useState(false);
+
   // function to reset the clicked card
   const resetClicked = () => {
     setClickedId([]);
@@ -35,7 +37,7 @@ function ShowPictures() {
   // function to set the clickedsrc and clickedid to the one that are clicked
   const setClicked = (event) => {
     setClickedId((oldId) => [...oldId, event.target.id]);
-    setClickedSrc((oldSrc) => [...oldSrc, event.target.src]);
+    setClickedSrc((oldSrc) => [...oldSrc, event.target.name]);
   };
   // limit the click to 2
   const clikedImg = (event) => {
@@ -47,6 +49,7 @@ function ShowPictures() {
   // call the clickedImg function on click
   const handleClick = (event) => {
     clikedImg(event);
+    setFlipped(true);
   };
 
   // Map through given aray and create all the cards
@@ -55,21 +58,34 @@ function ShowPictures() {
       setCard((oldCard) =>
         [
           ...oldCard,
-          <input
-            type="image"
-            onClick={(event) => handleClick(event)}
-            onDragStart={(e) => e.preventDefault()}
-            style={{
-              margin: "auto",
-              height: "200px",
-              width: "150px",
-            }}
-            alt="memorycard"
-            key={`${uuidv4()}`}
-            src={`${url}`}
-            id={`${uuidv4()}`}
-          />,
-          //  sort the array
+          <div className={`card-outer ${flipped === true ? "flipped" : ""}`}>
+            <div className="card">
+              <input
+                className="back"
+                type="image"
+                key={`${uuidv4()}`}
+                id={`${uuidv4()}`}
+                alt=""
+                src=""
+                name={url}
+                onClick={(event) => handleClick(event)}
+              />
+              ,
+              <input
+                className="front "
+                type="image"
+                // onClick={(event) => handleClick(event)}
+                onDragStart={(e) => e.preventDefault()}
+                alt="memorycard"
+                key={`${uuidv4()}`}
+                name={`${url}`}
+                id={`${uuidv4()}`}
+                src={`${url}`}
+              />
+              ,
+            </div>
+            ,
+          </div>,
         ].sort(() => Math.random() - 0.5)
       )
     );
@@ -102,16 +118,8 @@ function ShowPictures() {
   }, [ready]);
 
   return (
-    <div onDragStart={(e) => e.preventDefault()} className="App">
-      <div
-        onDragStart={(e) => e.preventDefault()}
-        className="card-container"
-        style={{
-          margin: "10px",
-          height: "70%",
-          width: "80%",
-        }}
-      >
+    <div onDragStart={(e) => e.preventDefault()}>
+      <div onDragStart={(e) => e.preventDefault()} className="imageGrid">
         {card}
       </div>
     </div>
