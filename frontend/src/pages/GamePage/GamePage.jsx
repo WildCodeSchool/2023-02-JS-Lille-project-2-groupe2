@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./GamePage.scss";
+// eslint-disable-next-line import/no-cycle
 import StopWatch from "../../components/StopWatch/StopWatch";
 import Countdown from "../../components/Countdown/Countdown";
 import ShowPictures from "../../components/ShowPictures/ShowPictures";
@@ -21,7 +22,6 @@ function GamePage() {
     <div className="game">
       <Countdown />
       <Level />
-
       {showComponent && <StopWatch />}
       {showComponent && <Score />}
       <ShowPictures />

@@ -14,46 +14,50 @@ import dog from "../../assets/dog.jpg";
 
 const imageList = [
   {
+    id: "imgbaba",
     name: "baba",
     url: flower,
     stat: "",
   },
+  { id: "kgjfvifh", name: "dudu", url: poke, stat: "" },
   {
-    name: "dudu",
-    url: poke,
-    stat: "",
-  },
-  {
+    id: "pepepepep",
     name: "baba",
     url: nature,
     stat: "",
   },
   {
+    id: "jvifojiojvjf",
     name: "dudu",
     url: "https://picsum.photos/seed/picsum/200/300",
     stat: "",
   },
   {
+    id: " hidfuvhdfuivhd",
     name: "baba",
     url: dog,
     stat: "",
   },
   {
+    id: "juihih",
     name: "baba",
     url: k,
     stat: "",
   },
   {
+    id: "jinikodfvhfuivn",
     name: "baba",
     url: w,
     stat: "",
   },
   {
+    id: "fjiovdjvjiodf",
     name: "baba",
     url: logo,
     stat: "",
   },
   {
+    id: " xsxzdidzuihd",
     name: "baba",
     url: backImg,
     stat: "",
@@ -62,7 +66,17 @@ const imageList = [
 //  Temporary array will be fetched data from props
 
 function ShowPictures() {
-  const [cards] = useState(shuffle([...imageList, ...imageList])); // shuffle cards everytime
+  const newArray = (count) => {
+    return imageList.map((obj, index) => {
+      // eslint-disable-next-line no-dupe-keys
+      return { ...obj, id: index + count };
+    });
+  };
+  // const newArray = imageList.map((obj, index) => {
+  //   // eslint-disable-next-line no-dupe-keys
+  //   return { ...obj, id: index + 1 };
+  // });
+  const [cards] = useState(shuffle([...newArray(1), ...newArray(99)])); // shuffle cards everytime
   const [clickedImg, setClickedImg] = useState([]); // the chosen img
   const [matchedCards, setMatchedCards] = useState([]); // array of identical imgs
   const [pairNum, setpairNum] = useState(0); // this shows how many times the player clicked (2 clicks = 1 turn)
@@ -111,6 +125,7 @@ function ShowPictures() {
       setpairNum(pairNum + 1);
     }
   };
+
   return (
     <>
       <div className="imageGrid">
@@ -121,6 +136,7 @@ function ShowPictures() {
           return (
             /* eslint-disable */
             <div
+              key={card.id}
               className={`card-outer ${displayedCard ? "flipped" : ""}`}
               onClick={() => {
                 flipCard(index);
@@ -147,6 +163,7 @@ function ShowPictures() {
           );
         })}
       </div>
+      <StopWatch setMatchedCards={setMatchedCards} />
       <div className="ClickCounterBtn">
         <button className="myButton" type="submit">
           {pairNum} Turns

@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from "react";
 import "./StopWatch.scss";
+import "../ShowPictures/ShowPictures";
+import "../../pages/GamePage/GamePage";
 
-function StopWatch() {
+function StopWatch(setMatchedCards) {
   const [time, setTime] = useState(300);
+
   const restart = () => {
+    setMatchedCards([]);
     setTime(300);
   };
+
   useEffect(() => {
     const timer = setInterval(() => {
       setTime((timee) => {
@@ -24,7 +29,7 @@ function StopWatch() {
         {`${Math.floor(time / 60)}`.padStart(2, 0)}:
         {`${time % 60}`.padStart(2, 0)}
       </p>
-      <button type="submit" className="myButton" onClick={restart}>
+      <button type="submit" className="restartButton" onClick={restart}>
         Restart
       </button>
     </div>
