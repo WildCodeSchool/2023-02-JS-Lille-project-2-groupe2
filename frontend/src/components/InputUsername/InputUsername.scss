@@ -2,6 +2,8 @@ input {
   background-color: white;
   font-family: "cherry bomb", sans-serif;
   border-radius: 4px;
+  width: auto;
+  height: 50px;
 }
 
 .input-username {
@@ -9,10 +11,13 @@ input {
 }
 
 .pseudo {
+  display: flex;
+  justify-content: space-around;
   position: relative;
   color: white;
   font-size: 24px;
-  left: 35%;
+  width: auto;
+  height: auto;
 }
 
 .form-username {
@@ -21,12 +26,17 @@ input {
 }
 
 .play {
+  position: relative;
+  right: 7%;
+  top: 2%;
   border-radius: 4px;
+  height: 60px;
   width: auto;
-  height: auto;
   background-color: #99c24d;
   color: white;
+  border-radius: 4px;
 }
+
 
 .play:active {
   box-shadow: 5px 4px 24px 5px #f18f01;

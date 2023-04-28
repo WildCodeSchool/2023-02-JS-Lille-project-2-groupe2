@@ -30,19 +30,21 @@ function InputUserName() {
           handleSubmit(e);
         }}
       >
-        <input
-          type="text"
-          id="input"
-          value={inputValue}
-          onChange={(e) => {
-            handleInputChange(e);
-          }}
-          placeholder="Enter your Nickname"
-          maxLength={15}
-        />
-        <button className="play" type="submit">
-          Validate
-        </button>
+        <div className="playall">
+          <input
+            type="text"
+            id="input"
+            value={inputValue}
+            onChange={(e) => {
+              handleInputChange(e);
+            }}
+            placeholder="Enter your Nickname"
+            maxLength={15}
+          />
+          <button className="play" type="submit">
+            Validate
+          </button>
+        </div>
       </form>
     </div>
   );

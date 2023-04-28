@@ -1,5 +1,4 @@
 import { useNavigate } from "react-router";
-import "./StartButton.scss";
 
 function StartButton() {
   // The start button only appears when another button is clicked.
