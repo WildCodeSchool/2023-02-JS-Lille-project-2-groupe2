@@ -5,7 +5,8 @@ input {
 }
 
 .input-username {
-  font-family: "cherry bomb", sans-serif;
+  font-family:"cherry bomb", sans-serif;
+
 }
 
 .pseudo {
@@ -21,6 +22,7 @@ input {
 }
 
 .play {
+
   border-radius: 4px;
   width: auto;
   height: auto;
@@ -31,3 +33,4 @@ input {
 .play:active {
   box-shadow: 5px 4px 24px 5px #f18f01;
 }
+
