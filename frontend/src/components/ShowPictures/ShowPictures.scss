@@ -12,7 +12,6 @@
   font-weight: bold;
   padding: 9px 18px;
   text-decoration: none;
-  text-shadow: -2px 1px 6px #f2ab30;
 }
 .myButton:hover {
   background: linear-gradient(to bottom, #ffb342 5%, #ffb545 100%);
@@ -25,7 +24,9 @@
 
 .imageGrid {
   //background-color: #e0a64e;
-  position: relative;
+  position: absolute;
+  left: 20%;
+  top: 20%;
   width: calc(160vh - 240px);
   max-width: calc(100vw - 40px);
   display: grid;
@@ -58,11 +59,12 @@
 }
 .card .front img {
   display: block;
-  max-width: 100%;
+  max-width: 100px;
 }
 .card .back {
-  background-color: #99c24d;
+  background-image: url("../../assets/logoturn.png");
   transform: rotateY(180deg);
+  border-radius: 5px;
 }
 .card-outer.flipped .card {
   transform: rotateY(0);

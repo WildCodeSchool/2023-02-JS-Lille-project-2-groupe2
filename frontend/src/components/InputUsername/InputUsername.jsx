@@ -37,7 +37,7 @@ function InputUserName() {
           onChange={(e) => {
             handleInputChange(e);
           }}
-          placeholder="Entrer votre pseudo"
+          placeholder="Enter your Nickname"
           maxLength={15}
         />
         <button className="play" type="submit">

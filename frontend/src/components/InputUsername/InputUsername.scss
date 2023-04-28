@@ -1,15 +1,18 @@
 input {
-  display: flex;
-  justify-content: center;
   background-color: white;
   font-family: "cherry bomb", sans-serif;
   border-radius: 4px;
-  box-shadow: 5px 4px 24px 5px #f18f01;
+}
+
+.input-username {
+  font-family: "cherry bomb", sans-serif;
 }
 
 .pseudo {
+  position: relative;
   color: white;
   font-size: 24px;
+  left: 35%;
 }
 
 .form-username {
@@ -19,19 +22,12 @@ input {
 
 .play {
   border-radius: 4px;
-  width: 70px;
-  height: 50px;
+  width: auto;
+  height: auto;
   background-color: #99c24d;
-  box-shadow: 5px 4px 24px 5px #f18f01;
   color: white;
 }
 
-button {
-  font-family: "cherry bomb", sans-serif;
-  background-color: #f18f01;
-  color: white;
-  width: 70px;
-  height: 40px;
-  border-radius: 10px;
-  text-shadow: 1px 1px 3px #000000;
+.play:active {
+  box-shadow: 5px 4px 24px 5px #f18f01;
 }

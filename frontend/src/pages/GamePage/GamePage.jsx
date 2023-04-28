@@ -3,7 +3,6 @@ import "./GamePage.scss";
 import StopWatch from "../../components/StopWatch/StopWatch";
 import Countdown from "../../components/Countdown/Countdown";
 import ShowPictures from "../../components/ShowPictures/ShowPictures";
-import Level from "../../components/Level/Level";
 import Score from "../../components/Score/Score";
 
 function GamePage() {
@@ -20,7 +19,6 @@ function GamePage() {
   return (
     <div className="game">
       <Countdown />
-      <Level />
 
       {showComponent && <StopWatch />}
       {showComponent && <Score />}

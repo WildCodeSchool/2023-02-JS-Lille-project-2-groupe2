@@ -1,21 +1,14 @@
-.stopwatch-container {
-  /* background-color: blue; */
-  width: 10%;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: row-reverse;
-  margin-top: 10px;
-  align-items: flex-end;
-  position: relative;
-  z-index: 1;
-}
+//.stopwatch-container {
+/* background-color: blue; */
+//width: 95%;
+//}
 
 .clock {
-  width: 10%;
+  position: absolute;
+  bottom: 15%;
+  left: 3%;
   font-size: 30px;
-  font-weight: 500;
   color: #f19101;
-  margin-top: 70px;
   font-family: "cherry bomb", sans-serif;
 }
 
@@ -26,6 +19,7 @@
   -webkit-text-stroke: 0.5px black;
   background-color: hsl(36, 99%, 47%);
   border-radius: 4px;
+  width: auto;
 
   display: inline-block;
   cursor: pointer;
