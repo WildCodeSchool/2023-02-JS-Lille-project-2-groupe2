@@ -13,6 +13,7 @@
   padding: 9px 18px;
   text-decoration: none;
   text-shadow: -2px 1px 6px #f2ab30;
+  width: auto; 
 }
 .myButton:hover {
   background: linear-gradient(to bottom, #ffb342 5%, #ffb545 100%);
@@ -64,7 +65,7 @@
   background-color: #99c24d;
   transform: rotateY(180deg);
 }
-.card-outer.flipped .card {
+.card-outer.flipped {
   transform: rotateY(0);
 }
 
@@ -79,4 +80,10 @@
 #princess {
   height: 50vh;
   left: 40%;
+}
+
+.ClickCounterBtn{
+  position: absolute;
+  top: 45%; 
+  right: 3%; 
 }

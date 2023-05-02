@@ -5,6 +5,7 @@ import { shuffle } from "lodash";
 import StopWatch from "../StopWatch/StopWatch";
 import Score from "../Score/Score";
 import Countdown from "../Countdown/Countdown";
+import back from '@assets/back.png'; 
 
 const imageList = [
   {
@@ -247,7 +248,7 @@ function GameLogic() {
           setScore(score + 500);
         } else {
           console.warn("not a match !");
-          if (score === 0 || score <= 300) {
+          if (score === 0 || score <= 150) {
             setScore(0);
           } else {
             setScore(score - 150);
@@ -329,11 +330,13 @@ function GameLogic() {
           );
         })}
       </div>
+      {showComponent &&
       <div className="ClickCounterBtn">
         <button className="myButton" type="submit">
           {pairNum} Turns
         </button>
       </div>
+}
     </>
   );
 }

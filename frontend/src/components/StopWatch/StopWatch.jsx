@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import "./StopWatch.scss";
 
 function StopWatch() {
-  const [time, setTime] = useState(300);
+  const [time, setTime] = useState(120);
   const restart = () => {
-    setTime(300);
+    setTime(120);
   };
   useEffect(() => {
     const timer = setInterval(() => {

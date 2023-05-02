@@ -11,9 +11,7 @@ $white: #fff;
   top: 50%;
   transform: translate(-50%, -50%);
 }
-* {
-  background-color: $black;
-}
+
 .wrapper {
   font-family: $font;
   display: flex;
@@ -22,7 +20,7 @@ $white: #fff;
 .rules {
   @include absolute-center();
   height: 60vh;
-  background-color: $black;
+  //background-color: $black;
   border-radius: 8px;
   overflow: hidden;
   margin: 20px;
@@ -44,7 +42,6 @@ ul {
   font-size: 16px;
   color: $white;
   margin-bottom: 16px;
-  height: 15vh;
   list-style: none;
 }
 button {
