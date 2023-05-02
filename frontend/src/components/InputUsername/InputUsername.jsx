@@ -1,10 +1,10 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import "./InputUsername.scss";
 
-function InputUserName() {
+function InputUserName({ isReady }) {
   const [text, setText] = useState("");
   const [name, setName] = useState("");
-
   const specialCharsRegex = /[^\w\s]/;
   const [inputValue, setInputValue] = useState("");
 
@@ -17,13 +17,17 @@ function InputUserName() {
     return value;
   }
   function handleSubmit(event) {
-    event.preventDefault();
     setName(text);
     setInputValue("");
+    event.preventDefault();
+    if (text.length !== 0) {
+      isReady(true);
+    }
   }
+
   return (
     <div className="input-username">
-      <h1 className="pseudo">Your username: {name} </h1>
+      <h1 className="pseudo">{name && `Pseudo : ${name}`} </h1>
       <form
         className="form-username"
         onSubmit={(e) => {
@@ -31,13 +35,14 @@ function InputUserName() {
         }}
       >
         <input
+          required
           type="text"
           id="input"
           value={inputValue}
           onChange={(e) => {
             handleInputChange(e);
           }}
-          placeholder="Entrer votre pseudo"
+          placeholder="Type in your pseudo"
           maxLength={15}
         />
         <button className="play" type="submit">
@@ -49,3 +54,6 @@ function InputUserName() {
 }
 
 export default InputUserName;
+InputUserName.propTypes = {
+  isReady: PropTypes.func.isRequired,
+};

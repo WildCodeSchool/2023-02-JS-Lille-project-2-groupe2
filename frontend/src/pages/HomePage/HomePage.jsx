@@ -1,17 +1,22 @@
 import { useState } from "react";
+import FetchButtons from "../../components/FetchButtons/FetchButtons";
 import InputUserName from "../../components/InputUsername/InputUsername";
-import StartButton from "../../components/StartButton/StartButton";
+
 import "./HomePage.scss";
 
 function HomePage() {
-  const [playerName, setPlayerName] = useState("");
-  console.warn(playerName);
+  const [ready, setReady] = useState(false);
+
+  const isReady = (value) => {
+    setReady(value);
+  };
+
   return (
     <>
       <h1 className="header_text">Mashup Memo</h1>
-      <InputUserName playername={playerName} setPlayerName={setPlayerName} />
-      <StartButton />
-      {/* <Leaderboard playerName={playerName}/> */}
+
+      <InputUserName isReady={isReady} />
+      <FetchButtons isReady={ready} />
     </>
   );
 }
