@@ -1,0 +1,31 @@
+$green: #99C24D;
+$orange: #F18F01;
+$black: #494A4D;
+$red: #FF0505;
+$white: #fff;
+$font: "cherry bomb", sans-serif;
+@mixin title {
+  font-size: xx-large;
+  color: #f18f01;
+  text-align: center;
+  vertical-align: text-top;
+  font-size: 48px;
+}
+@mixin text-nav {
+  font-size: x-large;
+}
+@mixin text-size {
+  font-size: medium;
+}
+@mixin absolute-center() {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin text-shadow() {
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.65);
+}
+@mixin object-shadow() {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.65);
+}

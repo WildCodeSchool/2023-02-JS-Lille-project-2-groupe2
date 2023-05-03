@@ -5,6 +5,7 @@ import { shuffle } from "lodash";
 import StopWatch from "../StopWatch/StopWatch";
 import Score from "../Score/Score";
 import Countdown from "../Countdown/Countdown";
+import PropTypes from 'prop-types';
 
 function GameLogic({ apiName, apiData, apiList }) {
   //  Shuffle the apiData to not get the same image over and over you can modify the "15" value to change number of cards
