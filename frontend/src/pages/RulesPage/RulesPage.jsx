@@ -18,7 +18,7 @@ function RulesPage() {
         <p>Enter your nickname, choose the theme and launch the game.</p>
         <br />
         <br />
-        <p>30 cards, 15 pairs of cards to find in 5 minutes.</p>
+        <p>30 cards, 15 pairs of cards to find in 2 minutes.</p>
         <p>
           Each time you find a pair, you'll earn 500 points.
           <br />
