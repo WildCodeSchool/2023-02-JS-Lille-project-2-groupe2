@@ -112,10 +112,9 @@ function FetchButtons({ isReady }) {
 
   // Function to render the data from the API in the last return,  perhaps it could be
   // used to send image to other components ?
-  const Spinner = () => <div className="loader"></div>
   const renderApiData = () => {
     if (filteredData.length === 0 && fetched) {
-      return <span> {Spinner()}</span>
+      return <div>Loading...</div>;
     }
     return (
       <div>
