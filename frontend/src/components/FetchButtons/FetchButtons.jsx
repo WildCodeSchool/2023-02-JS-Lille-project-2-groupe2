@@ -114,7 +114,7 @@ function FetchButtons({ isReady }) {
   // used to send image to other components ?
   const renderApiData = () => {
     if (filteredData.length === 0 && fetched) {
-      return <div>Loading...</div>;
+      return <span>loading</span>
     }
     return (
       <div>
