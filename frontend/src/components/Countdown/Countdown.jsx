@@ -23,18 +23,17 @@ function Countdown() {
 
   return (
     <div className="timer-wrapper">
-        <CountdownCircleTimer
-          className="timeCircle"
-          isPlaying
-          duration={5}
-          colors={["#fefe4d", "#fefe4d", "#feb74d", "f19101"]}
-          colorsTime={[10, 6, 3, 0]}
-          onComplete={() => ({ shouldRepeat: true, delay: 1 })}
-        >
-          {renderTime}
-        </CountdownCircleTimer>
-      </div>
-    
+      <CountdownCircleTimer
+        className="timeCircle"
+        isPlaying
+        duration={5}
+        colors={["#fefe4d", "#fefe4d", "#feb74d", "f19101"]}
+        colorsTime={[10, 6, 3, 0]}
+        onComplete={() => ({ shouldRepeat: true, delay: 1 })}
+      >
+        {renderTime}
+      </CountdownCircleTimer>
+    </div>
   );
 }
 

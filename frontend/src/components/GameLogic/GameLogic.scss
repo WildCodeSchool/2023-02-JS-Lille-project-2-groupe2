@@ -7,7 +7,7 @@
   display: grid;
   grid-gap: 10px;
   margin: auto;
-  margin-top: 80px; 
+  margin-top: 80px;
   grid-template-columns: repeat(7, 1fr);
 }
 
@@ -45,11 +45,8 @@
   transform: rotateY(0);
 }
 
-.turns{
-  position: absolute;
-  top: 23%; 
-  left: 3%; 
+.turns {
   @include text-size;
-  @include text-shadow; 
+  @include text-shadow;
   color: $white;
 }

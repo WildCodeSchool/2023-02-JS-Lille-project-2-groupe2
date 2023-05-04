@@ -4,112 +4,93 @@ function Leaderboard() {
   const board = [
     {
       id: 1,
-      name: "dfdef",
-      level: null,
-      xp: null,
+      name: "LeBGdu59",
+      score: 50550,
     },
     {
-      id: 1,
-      name: "vavvarv",
-      level: null,
-      xp: null,
+      id: 2,
+      name: "Faustine",
+      score: 43390,
     },
     {
-      id: 1,
-      name: "vvavav",
-      level: null,
-      xp: null,
+      id: 3,
+      name: "Jochelin",
+      score: 42900,
     },
     {
-      id: 1,
-      name: "dvav",
-      level: null,
-      xp: null,
+      id: 4,
+      name: "Vivapasta",
+      score: 32345,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 5,
+      name: "Rudymentaire",
+      score: 25098,
     },
     {
-      id: 1,
-      name: "",
-
-      level: null,
-      xp: null,
+      id: 6,
+      name: "Cooloud",
+      score: 23403,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 7,
+      name: "Michaël jaqueson",
+      score: 22980,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 8,
+      name: "MohammeDixDoigts",
+      score: 21900,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 9,
+      name: "Rudydoigtdepieds",
+      score: 20847,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 10,
+      name: "Pokemon huGo",
+      score: 19833,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 11,
+      name: "Mohammedical",
+      score: 19405,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 12,
+      name: "Romainichel",
+      score: 18394,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 13,
+      name: "Tesla",
+      score: 17594,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 14,
+      name: "Marzoukladanse",
+      score: 12453,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 15,
+      name: "AnthonyVAFC",
+      score: 11900,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 16,
+      name: "Alexterieur",
+      score: 10944,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 17,
+      name: "Elizabete",
+      score: 9493,
     },
     {
-      id: 1,
-      name: "",
-      level: null,
-      xp: null,
+      id: 18,
+      name: "Fabien",
+      score: 8390,
     },
   ];
   return (
@@ -128,8 +109,6 @@ function Leaderboard() {
 
           <div>Player</div>
 
-          <div>MaxLvl</div>
-
           <div>Score</div>
         </div>
         <div className="list">
@@ -139,8 +118,7 @@ function Leaderboard() {
               <div className="user">
                 <span> {leader.name} </span>
               </div>
-              <span> {leader.level} </span>
-              <span> {leader.xp} </span>
+              <span> {leader.score} </span>
             </div>
           ))}
         </div>

@@ -1,71 +1,137 @@
-// $green: #99c24d;
-// $orange: #f18f01;
-// $black: #494a4d;
-// $font: "Cherry Bomb";
-// $red: #ff0505;
-// $white: #fff;
+@import "@components/Utils/Utils.scss";
 
-// @mixin absolute-center() {
-//   position: absolute;
-//   left: 50%;
-//   top: 50%;
-//   transform: translate(-50%, -50%);
-// }
-
-// * {
-//   font-family: $font;
-// }
-// .wrapper {
-//   @include absolute-center();
-//   display: flex;
-//   justify-content: center;
-//   background-color: $black;
-// }
+.popup {
+  // @include absolute-center();
+  box-shadow: inset 4px 4px 82px $red;
+  display: flex;
+  justify-content: center;
+  background-color: $orange;
+  justify-content: flex-start;
+  transition: transform 200ms;
+  color: $red;
+  align-items: center;
+  flex-wrap: nowrap;
+  align-content: stretch;
+  flex-direction: column;
+  border-radius: 15px;
+  width: 85vh;
+  @include absolute-center;
+  z-index: 100;
+}
+// popup div
+// gameWin h1
+// message h2
+// logoPopUp img
+// scorePopUp h3
 // .popup {
 //   @include absolute-center();
 //   width: 300px;
+//   height: 500px;
 //   background-color: $orange;
 //   border-radius: 8px;
-//   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
 //   overflow: hidden;
-//   display: flexbox;
-//   justify-content: center;
-//   transition: transform 200ms;
-//   font-family: $font;
-//   color: $red;
+//
 // }
-// .LvL {
-// }
+​
 // .title {
 //   padding-left: 5px;
 //   font-size: 30px;
 //   margin-bottom: 8px;
 //   color: $red;
 // }
-
-// .score {
-//   padding-left: 5px;
-//   font-size: 16px;
-//   color: $white;
-//   margin-top: 20vh;
-// }
+.scorePopUp {
+  padding-left: 5px;
+  font-size: 30px;
+  color: $white;
+  letter-spacing: 1.3px;
+  -webkit-text-stroke: 1px black;
+  text-shadow: 1px 1px 3px #000000;
+}
+// margin-top: 20vh;
 // .restart {
-//   padding: 2vh 3vw;
+//   // padding: 2vh 3vw;
 //   border-radius: 10px;
 //   background: $black;
 //   font-size: 20px;
 //   color: #ffffff;
 //   font-weight: bold;
-//   margin: 10px 30px;
-//   color: #fff;
-//   align-self: center;
-
+//   // margin: 10px 30px;
+//   // color: #fff;
+//   // align-self: center;
 //   &:hover {
 //     background: $black;
 //   }
 // }
-// .logo {
-//   @include absolute-center();
-//   padding-top: 30px;
-//   width: 35vw;
+.logoPopUp {
+  // @include absolute-center();
+  filter: drop-shadow(3px 20px 20px rgba(255, 56, 56, 0.65));
+  padding: 30px;
+  width: 300px;
+}
+// .modal-backdrop {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   background-color: rgba(0, 0, 0, 0.4);
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   z-index: 2;
+// }
+​ .modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  backdrop-filter: blur(1px);
+}
+​
+// .modal-content {
+//   // width: 60%;
+//   box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+//   border-radius: 10px;
+//   min-height: 200px;
+//   background-color: $orange;
+//   padding: 25px;
+// }
+.gameWin {
+  text-shadow: 1px 1px 3px #000000;
+  color: $green;
+  font-size: 50px;
+  letter-spacing: 1.3px;
+  -webkit-text-stroke: 1px black; // padding: 15px;
+}
+.win-title {
+  text-shadow: 1px 1px 3px #000000;
+  justify-self: center;
+  font-size: 40px;
+  color: $white;
+  letter-spacing: 1.3px;
+  -webkit-text-stroke: 1px black;
+}
+.hide {
+  display: none;
+}
+.lose-title,
+.gameoverPopUp {
+  color: $red;
+  text-shadow: 1px 1px 3px #000000;
+  font-size: 40px;
+  letter-spacing: 1.3px;
+  -webkit-text-stroke: 1px black;
+}
+// .gameoverPopUp {
+//   color: $red;
+//   text-shadow: 1px 1px 3px #000000;
+//   font-size: 40px;
+//   letter-spacing: 1.3px;
+//   -webkit-text-stroke: 1px black;
 // }

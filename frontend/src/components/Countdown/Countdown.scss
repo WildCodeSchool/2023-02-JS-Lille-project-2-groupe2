@@ -1,11 +1,10 @@
 @import "../Utils/Utils.scss";
 
-
 .timer-wrapper {
-  position: absolute;
-  bottom: 5%; 
-  left: 45%; 
-  @include text-size; 
+  @include text-size;
+  position: fixed;
+  bottom: 5%;
+  left: 45%;
 }
 
 // .timer {

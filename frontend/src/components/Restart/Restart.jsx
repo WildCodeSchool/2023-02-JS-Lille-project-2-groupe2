@@ -9,7 +9,7 @@ function Restart() {
       <button type="submit" id="restart" onClick={restart}>
         Restart
       </button>
-      </div>
+    </div>
   );
 }
 export default Restart;
