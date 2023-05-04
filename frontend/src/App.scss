@@ -15,6 +15,9 @@ button {
   @include object-shadow;
   cursor: pointer;
 }
+button:hover{
+  color: lightgrey;
+}
 html {
   background-color: $black;
   min-height: 100%;

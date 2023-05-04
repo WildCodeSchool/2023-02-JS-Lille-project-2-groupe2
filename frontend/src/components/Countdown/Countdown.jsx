@@ -22,8 +22,7 @@ function Countdown() {
   // the timer can be reset with the restart btn
 
   return (
-    <div>
-      <div className="timer-wrapper">
+    <div className="timer-wrapper">
         <CountdownCircleTimer
           className="timeCircle"
           isPlaying
@@ -35,7 +34,7 @@ function Countdown() {
           {renderTime}
         </CountdownCircleTimer>
       </div>
-    </div>
+    
   );
 }
 
