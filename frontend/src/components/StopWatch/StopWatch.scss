@@ -15,10 +15,10 @@
   
 .clock {
   width: 10%;
-  font-size: 30px;
-  font-weight: 500;
+  font-size: 25px;
+  font-weight: 100;
   color: $orange; 
-  margin-top: 60px;
+  margin-top: 40px;
  @include text-shadow; 
 }
 

@@ -13,7 +13,21 @@ function HomePage() {
 
   return (
     <>
-      <h1 className="header_text">Mashup Memo</h1>
+      <div className="title_container">
+        <div className="header_text" id="Mashup">
+          <span style={{ "--i": -4 }}>M</span>
+          <span style={{ "--i": -3 }}>a</span>
+          <span style={{ "--i": -4 }}>s</span>
+          <span style={{ "--i": -1 }}>h</span>
+          <span style={{ "--i": 0 }}>u</span>
+          <span style={{ "--i": 1 }}>p</span>
+          <span></span>
+          <span style={{ "--i": 2 }}>M</span>
+          <span style={{ "--i": 3 }}>e</span>
+          <span style={{ "--i": 4 }}>m</span>
+          <span style={{ "--i": 4 }}>o</span>
+        </div>
+      </div>
 
       <InputUserName isReady={isReady} />
       <FetchButtons isReady={ready} />

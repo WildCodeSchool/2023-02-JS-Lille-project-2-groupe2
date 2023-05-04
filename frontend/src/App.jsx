@@ -14,7 +14,6 @@ function App() {
         <Routes>
           <Route path="/" element={<NavBar />}>
             <Route index element={<HomePage />} />
-            {/* <Route path="/rules" element={<RulesPage />} /> */}
             <Route path="/leaderboard" element={<LeaderboardPage />} />
             <Route path="/game" element={<GamePage />} />
             <Route path="/rules" element={<RulesPage />} />

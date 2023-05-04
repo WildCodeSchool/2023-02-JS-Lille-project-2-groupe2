@@ -3,25 +3,17 @@
 .timer-wrapper {
   @include text-size;
   position: fixed;
-  bottom: 5%;
+  bottom: 2%;
   left: 45%;
 }
 
-// .timer {
-//   font-family: "cherry bomb", sans-serif;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-// }
+svg{
+  width: 90px;
+  margin-top: 30px; 
+}
 
-// .text {
-//   color: #aaa;
-// }
-
-// .value {
-//   font-size: 20px;
-//   font-weight: bold;
-//   font-weight: 200;
-//   color: white;
-//   font-family: "cherry bomb", sans-serif;
-// }
+.value {
+  margin-right: 90px;
+  margin-top: 45px;
+  color: $white;
+}
